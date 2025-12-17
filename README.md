@@ -9,7 +9,7 @@ The API is publicly available with an interactive **Swagger documentation page**
 ---
 
 ## Live Links
-- **Code Repository:** https://github.com/melisasener/playlist-api
+- **Code Repository:** https://github.com/melisa-sener/playlist-api
 - **Live API:** https://simple-playlist-api.onrender.com/playlists
 - **Swagger UI:** https://simple-playlist-api.onrender.com/docs
 
