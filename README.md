@@ -1,36 +1,46 @@
-# SE4458 – Assignment 2: Playlist REST API  
+# SE4458 – Assignment 2: Playlist REST API
 
-### Project Overview
-- This project is a simple REST API developed using **Node.js** and **Express**.  
-- It provides basic CRUD operations for managing playlists.  
-- All data is stored in memory (no database).  
-- The API is publicly available with a **Swagger documentation page**.
+## Project Overview
+This project is a simple REST API developed using **Node.js** and **Express**.  
+It provides basic CRUD operations for managing playlists.  
+All data is stored in memory (no database).  
+The API is publicly available with an interactive **Swagger documentation page**.
 
+---
 
-### Links
-- **Code Repository:** [https://github.com/melisasener/playlist-api](https://github.com/melisasener/playlist-api)  
-- **Live Website (API):** [https://playlist-api-v60k.onrender.com/playlists](https://playlist-api-v60k.onrender.com/playlists)  
-- **Swagger Page:** [https://playlist-api-v60k.onrender.com/docs](https://playlist-api-v60k.onrender.com/docs)
+## Live Links
+- **Code Repository:** https://github.com/melisasener/playlist-api
+- **Live API:** https://simple-playlist-api.onrender.com/playlists
+- **Swagger UI:** https://simple-playlist-api.onrender.com/docs
 
+---
 
-### Design & Implementation
-- **Framework:** Node.js (Express)  
-- **Data:** Stored in a simple in-memory JavaScript array  
-- **Endpoints:**
-  - `GET /playlists` – List all playlists  
-  - `POST /playlists` – Create a new playlist  
-  - `PUT /playlists/:id` – Update an existing playlist  
-  - `DELETE /playlists/:id` – Delete a playlist  
-- Redirects `/` to `/docs` for easy access to Swagger.
+## Design & Implementation
+- **Framework:** Node.js with Express  
+- **Data Storage:** In-memory JavaScript array  
+- **Deployment:** Render (Web Service)
+- **Documentation:** Swagger (OpenAPI)
 
+### Available Endpoints
+- `GET /` – Health check  
+- `GET /playlists` – List all playlists  
+- `GET /playlists/:id` – Get playlist by ID  
+- `POST /playlists` – Create a new playlist  
+- `PUT /playlists/:id` – Update an existing playlist  
+- `DELETE /playlists/:id` – Delete a playlist  
 
-### Assumptions
-- No authentication or database connection required.  
-- Data is reset every time the server restarts.  
-- The focus is on demonstrating REST API structure and deployment.
+Swagger UI is available at `/docs` and allows testing all endpoints directly from the browser.
 
+---
 
-### Issues Encountered
-- Azure Student Plan (Turkey) blocked web app creation due to region restrictions (`RequestDisallowedByAzure` error).  
-- As a solution, I deployed the project on **Render**, which supports Node.js apps and provides a public URL.  
-- Swagger UI shows “No operations defined” because endpoints were kept simple for the assignment.
+## Assumptions
+- No authentication is required.  
+- No database is used; data resets when the server restarts.  
+- The goal is to demonstrate REST API design, Swagger documentation, and cloud deployment.
+
+---
+
+## Issues Encountered & Resolution
+- An earlier deployment became unreachable due to a Node.js version mismatch on the hosting platform.
+- The issue was resolved by enforcing **Node.js 18 (LTS)** and redeploying the application on Render.
+- The API and Swagger documentation are now fully accessible via the links above.
